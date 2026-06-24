@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 export default function ProposalPage() {
   return (
@@ -61,7 +62,7 @@ export default function ProposalPage() {
       </section>
 
       {/* ── SECTION 1: OBJECTIVE ── */}
-      <Section label="01. Objective" title="What We're Here to Achieve" bg="#fde7c8">
+      <Section label="01. Objective" title="What We're Here to Achieve" bg="#fde7c8" reveal>
         <p style={bodyText}>
           The objective of this partnership is to create a complete marketing system for Ganapati Builders
           and associated projects. Instead of working with multiple vendors or building a larger in-house team,
@@ -82,7 +83,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 2: MARKETING OWNERSHIP ── */}
-      <Section label="02. Marketing Ownership" title="Point of Contact" bg="#fff">
+      <Section label="02. Marketing Ownership" title="Point of Contact" bg="#fff" reveal>
         <p style={bodyText}>
           Social Musketeers will act as the central point of contact for all marketing activities.
           All marketing activities will be managed through a single workflow to ensure accountability,
@@ -97,7 +98,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 3: TEAM STRUCTURE ── */}
-      <Section label="03. Team Structure" title="Dedicated Resources" bg="#fde7c8">
+      <Section label="03. Team Structure" title="Dedicated Resources" bg="#fde7c8" reveal>
         <p style={bodyText}>
           To ensure smooth execution, dedicated resources will work exclusively on the Ganapati ecosystem.
         </p>
@@ -162,7 +163,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 4: REPORTING STRUCTURE ── */}
-      <Section label="04. Reporting Structure" title="Reporting Structure" bg="#fff">
+      <Section label="04. Reporting Structure" title="Reporting Structure" bg="#fff" reveal>
         <p style={bodyText}>A structured reporting process will be maintained across all projects.</p>
 
         <TwoCol>
@@ -211,7 +212,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 5: PERFORMANCE MARKETING ── */}
-      <Section label="05. Performance Marketing" title="Performance Marketing" bg="#fde7c8">
+      <Section label="05. Performance Marketing" title="Performance Marketing" bg="#fde7c8" reveal>
         <p style={bodyText}>
           Social Musketeers will manage complete performance marketing operations across assigned projects.
         </p>
@@ -243,7 +244,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 6: WEBSITE DEVELOPMENT ── */}
-      <Section label="06. Website Development" title="Website Development" bg="#fff">
+      <Section label="06. Website Development" title="Website Development" bg="#fff" reveal>
         <p style={bodyText}>
           All websites and landing pages will be developed using modern technologies that support
           performance, speed, scalability, and SEO.
@@ -274,7 +275,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 7: SEO ── */}
-      <Section label="07. SEO" title="SEO   Ganapati Builders" bg="#fde7c8">
+      <Section label="07. SEO" title="SEO for Ganapati Builders" bg="#fde7c8" reveal>
         <p style={bodyText}>
           SEO activities will focus on increasing visibility across Bangalore searches and building
           long-term organic traffic.
@@ -324,10 +325,10 @@ export default function ProposalPage() {
       <section style={{ background: "#0a2820", padding: "80px 32px" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <p style={{ fontFamily: "var(--font-rubik)", fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9a6e21", fontWeight: 600, marginBottom: 12 }}>
-            08   Commercials
+            08. Pricing
           </p>
           <h2 style={{ fontFamily: "var(--font-nunito), sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 900, color: "#fff", marginBottom: 40, lineHeight: 1.2 }}>
-            Investment & Pricing
+            Pricing
           </h2>
           <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 24px 60px rgba(0,0,0,0.3)" }}>
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -363,7 +364,7 @@ export default function ProposalPage() {
       </section>
 
       {/* ── SECTION 9: WHY THIS MODEL WORKS ── */}
-      <Section label="09. Why This Model Works" title="Why This Model Works" bg="#fde7c8">
+      <Section label="09. Why This Model Works" title="Why This Model Works" bg="#fde7c8" reveal>
         <p style={bodyText}>
           Ganapati Builders receives a complete marketing department under one structure.
         </p>
@@ -447,27 +448,31 @@ function SectionDivider() {
   );
 }
 
-function Section({ label, title, bg, children }: { label: string; title: string; bg: string; children: React.ReactNode }) {
+function Section({ label, title, bg, children, reveal }: { label: string; title: string; bg: string; children: React.ReactNode; reveal?: boolean }) {
+  const inner = (
+    <section style={{ background: bg, padding: "80px 32px", position: "relative", overflow: "hidden" }}>
+      {/* corner glow */}
+      <div style={{ position: "absolute", top: 0, right: 0, width: 260, height: 260, background: "radial-gradient(circle at top right, rgba(154,110,33,0.07) 0%, transparent 70%)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", bottom: 0, left: 0, width: 180, height: 180, background: "radial-gradient(circle at bottom left, rgba(20,102,88,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
+      <div style={{ maxWidth: 1100, margin: "0 auto", position: "relative" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+          <div style={{ width: 28, height: 2, background: "#9a6e21", borderRadius: 2 }} />
+          <p style={{ fontFamily: "var(--font-rubik)", fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#9a6e21", fontWeight: 700 }}>
+            {label}
+          </p>
+        </div>
+        <h2 style={{ fontFamily: "var(--font-nunito), sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 900, color: "#146658", marginBottom: 10, lineHeight: 1.15 }}>
+          {title}
+        </h2>
+        <div style={{ width: 56, height: 3, background: "linear-gradient(90deg, #9a6e21, #c49030)", borderRadius: 2, marginBottom: 36 }} />
+        {children}
+      </div>
+    </section>
+  );
   return (
     <>
       <SectionDivider />
-      <section style={{ background: bg, padding: "80px 32px", position: "relative", overflow: "hidden" }}>
-        {/* subtle corner accent */}
-        <div style={{ position: "absolute", top: 0, right: 0, width: 220, height: 220, background: "radial-gradient(circle at top right, rgba(154,110,33,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 1100, margin: "0 auto", position: "relative" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-            <div style={{ width: 28, height: 2, background: "#9a6e21", borderRadius: 2 }} />
-            <p style={{ fontFamily: "var(--font-rubik)", fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#9a6e21", fontWeight: 700 }}>
-              {label}
-            </p>
-          </div>
-          <h2 style={{ fontFamily: "var(--font-nunito), sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 900, color: "#146658", marginBottom: 10, lineHeight: 1.15 }}>
-            {title}
-          </h2>
-          <div style={{ width: 56, height: 3, background: "linear-gradient(90deg, #9a6e21, #c49030)", borderRadius: 2, marginBottom: 36 }} />
-          {children}
-        </div>
-      </section>
+      {reveal ? <ScrollReveal>{inner}</ScrollReveal> : inner}
     </>
   );
 }
@@ -520,7 +525,8 @@ function TwoCol({ children, style }: { children: React.ReactNode; style?: React.
 
 function ReportCard({ title, subtitle, items }: { title: string; subtitle?: string; items: string[] }) {
   return (
-    <div style={{ background: "#fff", borderRadius: 16, padding: "28px 28px", border: "1px solid #e8d5b7", boxShadow: "0 2px 16px rgba(20,102,88,0.05)" }}>
+    <ScrollReveal>
+    <div style={{ background: "#fff", borderRadius: 16, padding: "28px 28px", border: "1px solid #e8d5b7", boxShadow: "0 2px 16px rgba(20,102,88,0.05)", height: "100%" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: subtitle ? 6 : 18 }}>
         <div style={{ width: 4, height: 20, background: "linear-gradient(180deg,#146658,#9a6e21)", borderRadius: 2 }} />
         <p style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 800, fontSize: 16, color: "#146658" }}>{title}</p>
@@ -528,6 +534,7 @@ function ReportCard({ title, subtitle, items }: { title: string; subtitle?: stri
       {subtitle && <p style={{ fontSize: 13, color: "#777", marginBottom: 14 }}>{subtitle}</p>}
       <BulletList items={items} />
     </div>
+    </ScrollReveal>
   );
 }
 
@@ -538,6 +545,7 @@ function RoleBlock({ title, desc, blocks, objective }: {
   objective: string;
 }) {
   return (
+    <ScrollReveal>
     <div style={{ marginTop: 40, background: "#fff", borderRadius: 20, padding: "40px", border: "1px solid #e8d5b7", boxShadow: "0 4px 24px rgba(20,102,88,0.06)" }}>
       <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 20 }}>
         <div style={{ width: 5, minWidth: 5, height: 28, background: "linear-gradient(180deg,#146658,#9a6e21)", borderRadius: 3, marginTop: 3 }} />
@@ -560,5 +568,6 @@ function RoleBlock({ title, desc, blocks, objective }: {
         <p style={{ fontSize: 14, color: "#146658", fontStyle: "italic", fontWeight: 500, lineHeight: 1.6 }}>Objective: {objective}</p>
       </div>
     </div>
+    </ScrollReveal>
   );
 }
