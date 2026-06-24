@@ -46,7 +46,7 @@ export default function ProposalPage() {
           </div>
 
           <p style={{ fontSize: 17, color: "rgba(255,255,255,0.58)", lineHeight: 1.9, maxWidth: 600, margin: "0 auto 52px", fontFamily: "var(--font-rubik)" }}>
-            A complete marketing system — strategy, execution, reporting,
+            A complete marketing system: strategy, execution, reporting,
             lead generation, content creation, SEO, website development,
             and brand growth. All under one roof.
           </p>
@@ -61,7 +61,7 @@ export default function ProposalPage() {
       </section>
 
       {/* ── SECTION 1: OBJECTIVE ── */}
-      <Section label="01 — Objective" title="What We're Here to Achieve" bg="#fde7c8">
+      <Section label="01. Objective" title="What We're Here to Achieve" bg="#fde7c8">
         <p style={bodyText}>
           The objective of this partnership is to create a complete marketing system for Ganapati Builders
           and associated projects. Instead of working with multiple vendors or building a larger in-house team,
@@ -82,7 +82,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 2: MARKETING OWNERSHIP ── */}
-      <Section label="02 — Marketing Ownership" title="Point of Contact" bg="#fff">
+      <Section label="02. Marketing Ownership" title="Point of Contact" bg="#fff">
         <p style={bodyText}>
           Social Musketeers will act as the central point of contact for all marketing activities.
           All marketing activities will be managed through a single workflow to ensure accountability,
@@ -97,7 +97,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 3: TEAM STRUCTURE ── */}
-      <Section label="03 — Team Structure" title="Dedicated Resources" bg="#fde7c8">
+      <Section label="03. Team Structure" title="Dedicated Resources" bg="#fde7c8">
         <p style={bodyText}>
           To ensure smooth execution, dedicated resources will work exclusively on the Ganapati ecosystem.
         </p>
@@ -162,7 +162,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 4: REPORTING STRUCTURE ── */}
-      <Section label="04 — Reporting Structure" title="Reporting Structure" bg="#fff">
+      <Section label="04. Reporting Structure" title="Reporting Structure" bg="#fff">
         <p style={bodyText}>A structured reporting process will be maintained across all projects.</p>
 
         <TwoCol>
@@ -211,7 +211,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 5: PERFORMANCE MARKETING ── */}
-      <Section label="05 — Performance Marketing" title="Performance Marketing" bg="#fde7c8">
+      <Section label="05. Performance Marketing" title="Performance Marketing" bg="#fde7c8">
         <p style={bodyText}>
           Social Musketeers will manage complete performance marketing operations across assigned projects.
         </p>
@@ -243,7 +243,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 6: WEBSITE DEVELOPMENT ── */}
-      <Section label="06 — Website Development" title="Website Development" bg="#fff">
+      <Section label="06. Website Development" title="Website Development" bg="#fff">
         <p style={bodyText}>
           All websites and landing pages will be developed using modern technologies that support
           performance, speed, scalability, and SEO.
@@ -274,7 +274,7 @@ export default function ProposalPage() {
       </Section>
 
       {/* ── SECTION 7: SEO ── */}
-      <Section label="07 — SEO" title="SEO — Ganapati Builders" bg="#fde7c8">
+      <Section label="07. SEO" title="SEO   Ganapati Builders" bg="#fde7c8">
         <p style={bodyText}>
           SEO activities will focus on increasing visibility across Bangalore searches and building
           long-term organic traffic.
@@ -324,7 +324,7 @@ export default function ProposalPage() {
       <section style={{ background: "#0a2820", padding: "80px 32px" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <p style={{ fontFamily: "var(--font-rubik)", fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9a6e21", fontWeight: 600, marginBottom: 12 }}>
-            08 — Commercials
+            08   Commercials
           </p>
           <h2 style={{ fontFamily: "var(--font-nunito), sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 900, color: "#fff", marginBottom: 40, lineHeight: 1.2 }}>
             Investment & Pricing
@@ -363,7 +363,7 @@ export default function ProposalPage() {
       </section>
 
       {/* ── SECTION 9: WHY THIS MODEL WORKS ── */}
-      <Section label="09 — Why This Model Works" title="Why This Model Works" bg="#fde7c8">
+      <Section label="09. Why This Model Works" title="Why This Model Works" bg="#fde7c8">
         <p style={bodyText}>
           Ganapati Builders receives a complete marketing department under one structure.
         </p>
@@ -388,7 +388,7 @@ export default function ProposalPage() {
       {/* ── CLOSING STRIP ── */}
       <div style={{ background: "#146658", padding: "40px 32px", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 900, fontSize: "clamp(20px,3vw,32px)", color: "#fff", letterSpacing: "0.01em" }}>
-          One Team.&nbsp;<span style={{ color: "#fde7c8" }}>One Strategy.</span>&nbsp;Total Growth.
+          One Team. <span style={{ color: "#fde7c8" }}>One Strategy.</span> Total Growth.
         </p>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginTop: 16 }}>
           <div style={{ height: 1, width: 60, background: "rgba(253,231,200,0.3)" }} />
@@ -416,7 +416,7 @@ export default function ProposalPage() {
             </div>
             <div style={{ textAlign: "right" }}>
               <p style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 700, fontSize: 15, color: "rgba(255,255,255,0.7)" }}>Built to grow together.</p>
-              <p style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginTop: 4 }}>Confidential — Prepared for Ganapati Builders</p>
+              <p style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginTop: 4 }}>Confidential   Prepared for Ganapati Builders</p>
             </div>
           </div>
           <p style={{ textAlign: "center", fontSize: 11, color: "rgba(255,255,255,0.2)", marginTop: 20 }}>
