@@ -5,33 +5,56 @@ export default function ProposalPage() {
     <main style={{ fontFamily: "var(--font-rubik), sans-serif", background: "#fde7c8", color: "#111" }}>
 
       {/* ── NAV ── */}
-      <nav style={{ background: "#fff", borderBottom: "1px solid #e8d5b7" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "18px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <Image src="/sm-logo-white.png" alt="Social Musketeers" width={130} height={52} style={{ objectFit: "contain" }} />
-          <Image src="/ganapati-logo-proper.jpg" alt="Ganapati Builders" width={130} height={52} style={{ objectFit: "contain" }} />
+      <nav style={{ background: "#fff", borderBottom: "1px solid #e8d5b7", position: "sticky", top: 0, zIndex: 50, boxShadow: "0 2px 16px rgba(0,0,0,0.06)" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "14px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <Image src="/sm-logo-white.png" alt="Social Musketeers" width={160} height={64} style={{ objectFit: "contain" }} />
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ height: 1, width: 32, background: "#9a6e21" }} />
+            <span style={{ color: "#9a6e21", fontFamily: "var(--font-nunito)", fontWeight: 900, fontSize: 20 }}>×</span>
+            <div style={{ height: 1, width: 32, background: "#9a6e21" }} />
+          </div>
+          <Image src="/ganapati-logo-proper.jpg" alt="Ganapati Builders" width={160} height={64} style={{ objectFit: "contain" }} />
         </div>
       </nav>
 
       {/* ── HERO ── */}
-      <section style={{ background: "#0a2820", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: "var(--font-rubik)", fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9a6e21", fontWeight: 600, marginBottom: 20 }}>
-            Marketing Partnership Proposal
-          </p>
-          <h1 style={{ fontFamily: "var(--font-nunito), sans-serif", fontSize: "clamp(36px, 6vw, 64px)", fontWeight: 900, color: "#fff", lineHeight: 1.15, marginBottom: 24 }}>
-            Social Musketeers<br />
+      <section style={{ background: "#0a2820", padding: "100px 32px 80px", position: "relative", overflow: "hidden" }}>
+        {/* bg blobs */}
+        <div style={{ position: "absolute", top: -80, left: -80, width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(20,102,88,0.25) 0%, transparent 70%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", bottom: -60, right: -60, width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(154,110,33,0.18) 0%, transparent 70%)", pointerEvents: "none" }} />
+        {/* grid pattern overlay */}
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)", backgroundSize: "48px 48px", pointerEvents: "none" }} />
+
+        <div style={{ maxWidth: 860, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
+          {/* pill badge */}
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(154,110,33,0.15)", border: "1px solid rgba(154,110,33,0.35)", borderRadius: 999, padding: "6px 18px", marginBottom: 32 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#9a6e21", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-rubik)", fontSize: 12, letterSpacing: "0.18em", textTransform: "uppercase", color: "#c49030", fontWeight: 600 }}>Marketing Partnership Proposal</span>
+          </div>
+
+          <h1 style={{ fontFamily: "var(--font-nunito), sans-serif", fontSize: "clamp(40px, 6.5vw, 72px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 28 }}>
+            Social Musketeers
+            <br />
             <span style={{ color: "#9a6e21" }}>×</span> Ganapati Builders
           </h1>
-          <p style={{ fontSize: 17, color: "rgba(255,255,255,0.6)", lineHeight: 1.8, maxWidth: 620, margin: "0 auto 40px" }}>
-            A complete marketing system — strategy, execution, reporting, lead generation,
-            content creation, SEO, website development, and brand growth. All under one roof.
+
+          {/* gold rule */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 28 }}>
+            <div style={{ height: 1, width: 80, background: "linear-gradient(90deg, transparent, #9a6e21)" }} />
+            <span style={{ color: "#9a6e21", fontSize: 14, letterSpacing: "0.3em" }}>✦ ✦ ✦</span>
+            <div style={{ height: 1, width: 80, background: "linear-gradient(90deg, #9a6e21, transparent)" }} />
+          </div>
+
+          <p style={{ fontSize: 17, color: "rgba(255,255,255,0.58)", lineHeight: 1.9, maxWidth: 600, margin: "0 auto 52px", fontFamily: "var(--font-rubik)" }}>
+            A complete marketing system — strategy, execution, reporting,
+            lead generation, content creation, SEO, website development,
+            and brand growth. All under one roof.
           </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            {[["4", "Projects"], ["₹1.45L", "Monthly Investment"], ["1", "Point of Contact"], ["360°", "Coverage"]].map(([n, l]) => (
-              <div key={l} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12, padding: "14px 24px", textAlign: "center" }}>
-                <div style={{ fontFamily: "var(--font-nunito)", fontSize: 26, fontWeight: 900, color: "#9a6e21" }}>{n}</div>
-                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 2, letterSpacing: "0.08em" }}>{l}</div>
-              </div>
+
+          {/* service pills */}
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 10 }}>
+            {["Performance Marketing","SEO","Website Development","Social Media","Content Creation","Graphic Design","Reporting","Strategy"].map((s) => (
+              <span key={s} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 999, padding: "7px 16px", fontSize: 12, color: "rgba(255,255,255,0.65)", fontFamily: "var(--font-rubik)", letterSpacing: "0.03em" }}>{s}</span>
             ))}
           </div>
         </div>
@@ -362,20 +385,42 @@ export default function ProposalPage() {
         </p>
       </Section>
 
+      {/* ── CLOSING STRIP ── */}
+      <div style={{ background: "#146658", padding: "40px 32px", textAlign: "center" }}>
+        <p style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 900, fontSize: "clamp(20px,3vw,32px)", color: "#fff", letterSpacing: "0.01em" }}>
+          One Team.&nbsp;<span style={{ color: "#fde7c8" }}>One Strategy.</span>&nbsp;Total Growth.
+        </p>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginTop: 16 }}>
+          <div style={{ height: 1, width: 60, background: "rgba(253,231,200,0.3)" }} />
+          <span style={{ color: "rgba(253,231,200,0.5)", fontSize: 12, letterSpacing: "0.25em" }}>✦ ✦ ✦</span>
+          <div style={{ height: 1, width: 60, background: "rgba(253,231,200,0.3)" }} />
+        </div>
+      </div>
+
       {/* ── FOOTER ── */}
-      <footer style={{ background: "#0a2820", padding: "40px 32px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
-            <div style={{ background: "#fff", borderRadius: 10, padding: "10px 16px" }}>
-              <Image src="/sm-logo-white.png" alt="Social Musketeers" width={100} height={40} style={{ objectFit: "contain" }} />
+      <footer style={{ background: "#0a2820", padding: "48px 32px 32px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24, paddingBottom: 28, borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
+              <div style={{ background: "#fff", borderRadius: 12, padding: "10px 18px" }}>
+                <Image src="/sm-logo-white.png" alt="Social Musketeers" width={120} height={48} style={{ objectFit: "contain", display: "block" }} />
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ height: 1, width: 24, background: "#9a6e21" }} />
+                <span style={{ color: "#9a6e21", fontFamily: "var(--font-nunito)", fontWeight: 900, fontSize: 22 }}>×</span>
+                <div style={{ height: 1, width: 24, background: "#9a6e21" }} />
+              </div>
+              <div style={{ background: "#fff", borderRadius: 12, padding: "10px 18px" }}>
+                <Image src="/ganapati-logo-proper.jpg" alt="Ganapati Builders" width={120} height={48} style={{ objectFit: "contain", display: "block" }} />
+              </div>
             </div>
-            <span style={{ color: "#9a6e21", fontSize: 22, fontWeight: 900 }}>×</span>
-            <div style={{ background: "#fff", borderRadius: 10, padding: "10px 16px" }}>
-              <Image src="/ganapati-logo-proper.jpg" alt="Ganapati Builders" width={100} height={40} style={{ objectFit: "contain" }} />
+            <div style={{ textAlign: "right" }}>
+              <p style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 700, fontSize: 15, color: "rgba(255,255,255,0.7)" }}>Built to grow together.</p>
+              <p style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginTop: 4 }}>Confidential — Prepared for Ganapati Builders</p>
             </div>
           </div>
-          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.3)" }}>
-            Confidential. Prepared exclusively for Ganapati Builders. © 2025 Social Musketeers.
+          <p style={{ textAlign: "center", fontSize: 11, color: "rgba(255,255,255,0.2)", marginTop: 20 }}>
+            © 2025 Social Musketeers. All rights reserved.
           </p>
         </div>
       </footer>
@@ -392,20 +437,38 @@ const bodyText: React.CSSProperties = {
 };
 
 /* ─── reusable components ─── */
+function SectionDivider() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, padding: "0 32px", height: 0, position: "relative", zIndex: 2 }}>
+      <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, #c49030, transparent)" }} />
+      <span style={{ color: "#9a6e21", fontSize: 12, letterSpacing: "0.25em" }}>✦</span>
+      <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, #c49030, transparent)" }} />
+    </div>
+  );
+}
+
 function Section({ label, title, bg, children }: { label: string; title: string; bg: string; children: React.ReactNode }) {
   return (
-    <section style={{ background: bg, padding: "72px 32px" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <p style={{ fontFamily: "var(--font-rubik)", fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9a6e21", fontWeight: 600, marginBottom: 10 }}>
-          {label}
-        </p>
-        <h2 style={{ fontFamily: "var(--font-nunito), sans-serif", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 900, color: "#146658", marginBottom: 8, lineHeight: 1.2 }}>
-          {title}
-        </h2>
-        <div style={{ width: 48, height: 3, background: "#9a6e21", borderRadius: 2, marginBottom: 32 }} />
-        {children}
-      </div>
-    </section>
+    <>
+      <SectionDivider />
+      <section style={{ background: bg, padding: "80px 32px", position: "relative", overflow: "hidden" }}>
+        {/* subtle corner accent */}
+        <div style={{ position: "absolute", top: 0, right: 0, width: 220, height: 220, background: "radial-gradient(circle at top right, rgba(154,110,33,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 1100, margin: "0 auto", position: "relative" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+            <div style={{ width: 28, height: 2, background: "#9a6e21", borderRadius: 2 }} />
+            <p style={{ fontFamily: "var(--font-rubik)", fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#9a6e21", fontWeight: 700 }}>
+              {label}
+            </p>
+          </div>
+          <h2 style={{ fontFamily: "var(--font-nunito), sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 900, color: "#146658", marginBottom: 10, lineHeight: 1.15 }}>
+            {title}
+          </h2>
+          <div style={{ width: 56, height: 3, background: "linear-gradient(90deg, #9a6e21, #c49030)", borderRadius: 2, marginBottom: 36 }} />
+          {children}
+        </div>
+      </section>
+    </>
   );
 }
 
@@ -457,8 +520,11 @@ function TwoCol({ children, style }: { children: React.ReactNode; style?: React.
 
 function ReportCard({ title, subtitle, items }: { title: string; subtitle?: string; items: string[] }) {
   return (
-    <div style={{ background: "#fde7c8", borderRadius: 14, padding: "28px 28px", border: "1px solid #e8d5b7" }}>
-      <p style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 800, fontSize: 16, color: "#146658", marginBottom: subtitle ? 6 : 16 }}>{title}</p>
+    <div style={{ background: "#fff", borderRadius: 16, padding: "28px 28px", border: "1px solid #e8d5b7", boxShadow: "0 2px 16px rgba(20,102,88,0.05)" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: subtitle ? 6 : 18 }}>
+        <div style={{ width: 4, height: 20, background: "linear-gradient(180deg,#146658,#9a6e21)", borderRadius: 2 }} />
+        <p style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 800, fontSize: 16, color: "#146658" }}>{title}</p>
+      </div>
       {subtitle && <p style={{ fontSize: 13, color: "#777", marginBottom: 14 }}>{subtitle}</p>}
       <BulletList items={items} />
     </div>
@@ -472,10 +538,16 @@ function RoleBlock({ title, desc, blocks, objective }: {
   objective: string;
 }) {
   return (
-    <div style={{ marginTop: 40, background: "#fff", borderRadius: 16, padding: "36px 36px", border: "1px solid #e8d5b7" }}>
-      <h3 style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 900, fontSize: 22, color: "#146658", marginBottom: 10 }}>{title}</h3>
-      <p style={{ ...bodyText, fontSize: 15, marginBottom: 28, color: "#555" }}>{desc}</p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 32 }}>
+    <div style={{ marginTop: 40, background: "#fff", borderRadius: 20, padding: "40px", border: "1px solid #e8d5b7", boxShadow: "0 4px 24px rgba(20,102,88,0.06)" }}>
+      <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 20 }}>
+        <div style={{ width: 5, minWidth: 5, height: 28, background: "linear-gradient(180deg,#146658,#9a6e21)", borderRadius: 3, marginTop: 3 }} />
+        <div>
+          <h3 style={{ fontFamily: "var(--font-nunito), sans-serif", fontWeight: 900, fontSize: 22, color: "#146658", marginBottom: 6 }}>{title}</h3>
+          <p style={{ fontSize: 14, color: "#666", lineHeight: 1.7 }}>{desc}</p>
+        </div>
+      </div>
+      <div style={{ height: 1, background: "linear-gradient(90deg,#e8d5b7,transparent)", marginBottom: 28 }} />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
         {blocks.map((b) => (
           <div key={b.heading}>
             <SubLabel>{b.heading}</SubLabel>
@@ -483,8 +555,9 @@ function RoleBlock({ title, desc, blocks, objective }: {
           </div>
         ))}
       </div>
-      <div style={{ marginTop: 28, paddingTop: 20, borderTop: "1px solid #e8d5b7" }}>
-        <p style={{ fontSize: 14, color: "#146658", fontStyle: "italic", fontWeight: 500 }}>Objective: {objective}</p>
+      <div style={{ marginTop: 28, paddingTop: 20, borderTop: "1px solid #f0e4d0", display: "flex", alignItems: "flex-start", gap: 10 }}>
+        <span style={{ fontSize: 15, color: "#9a6e21" }}>✦</span>
+        <p style={{ fontSize: 14, color: "#146658", fontStyle: "italic", fontWeight: 500, lineHeight: 1.6 }}>Objective: {objective}</p>
       </div>
     </div>
   );
