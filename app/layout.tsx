@@ -19,7 +19,7 @@ const rubik = Rubik({
 export const metadata: Metadata = {
   title: "Marketing Partnership Proposal — Social Musketeers × Ganapati Builders",
   description:
-    "A complete marketing system for Ganapati Builders — performance marketing, SEO, content, design, and reporting under one roof.",
+    "Updated proposal from Social Musketeers: marketing services for Ganapati Builders, plus performance marketing and website development for Massive Reality.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
