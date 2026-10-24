@@ -27,9 +27,10 @@ function List({ items }: { items: string[] }) {
 
 function PartHead({ n, title, sub }: { n: string; title: string; sub: string }) {
   return (
-    <div className="up-parthead">
+    <div className="up-banner">
       <div className="up-badge">{n}</div>
       <div>
+        <p className="up-kicker">Part {n}</p>
         <h3 className="up-h3">{title}</h3>
         <p className="up-sub">{sub}</p>
       </div>
